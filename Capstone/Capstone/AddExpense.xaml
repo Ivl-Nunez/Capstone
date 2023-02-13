@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Capstone.AddExpense"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="black">
+    <ContentPage.Content>
+        <Frame Padding="10" Margin="15, 250, 15, 250"
+                    BackgroundColor="LightGray"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    >
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="Name" />
+                    <Entry x:Name="expenseName"/>
+                    <Label Text="Amount" />
+                    <Entry x:Name="expenseAmount"/>
+                    <Label Text="Due Date" />
+                    <DatePicker x:Name="expenseDueDate"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button x:Name="cancelBtn" Clicked="cancelBtn_Clicked" Text="Cancel" Margin="15" FontSize="32"/>
+                        <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="30" FontSize="32"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+    </ContentPage.Content>
+</ContentPage>
+

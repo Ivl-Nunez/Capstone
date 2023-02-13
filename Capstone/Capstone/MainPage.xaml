@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capstone.MainPage" SelectedTabColor="#eebbc3"
+             CurrentPageChanged="TabbedPage_CurrentPageChanged">
+
+    <ContentPage
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             IconImageSource="moneybag2.png"
+             BackgroundColor="#232946">
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Expenses" FontSize="48" TextColor="#fffffe" HorizontalOptions="Center" Margin="0,25,0,25" />
+            <ScrollView>
+
+            </ScrollView>
+                <!-- Bound expenses, pulled from db -->
+            <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="0,25,75,75" FontSize="48" TextColor="#eebbc3" VerticalOptions="End" HorizontalOptions="End"></Button>
+        </StackLayout>
+    </ContentPage>
+
+
+
+
+    <ContentPage
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        ios:Page.UseSafeArea="true"
+        IconImageSource="home.png"
+        BackgroundColor="#232946">
+
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Money in Account" FontSize="32" Margin="0,50,0,0" TextColor="#fffffe"/>
+            <Entry x:Name="moneyInAccount" Margin="0,0,0,50"/>
+            <Label Text="Next Pay Date" FontSize="32" TextColor="#fffffe"/>
+            <DatePicker x:Name="nextPayDate" Margin="0,0,0,50"/>
+            <Label Text="Free to Spend" FontSize="32" TextColor="#fffffe"/>
+            <Frame Padding="10"
+                    BackgroundColor="LightGray"
+                    CornerRadius="10"
+                    HeightRequest="100"
+                    WidthRequest="100">
+                <StackLayout>
+                <Label Text="{Binding FreeToSpend}"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                       TextColor="#fffffe"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
+                <Label Text="Last Date Budgeted: " FontSize="14" TextColor="#fffffe"/>
+                <Label x:Name="lastBudgetDate" Text="N/A" FontSize="14" TextColor="#fffffe"/>
+            </StackLayout>
+            <Button x:Name="budgetBtn" Text="Budget!" FontSize="64" Clicked="budgetBtn_Clicked" TextColor="#eebbc3"/>
+        </StackLayout>
+
+    </ContentPage>
+
+
+
+
+    <ContentPage
+        xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+        ios:Page.UseSafeArea="true"
+        IconImageSource="reports2.png"
+        BackgroundColor="#232946">
+
+        <StackLayout>
+            <Button x:Name="pastBudgetsBtn" Margin="0,75,0,75" Text="Past Budgets" FontSize="48" Clicked="pastBudgetsBtn_Clicked" TextColor="#eebbc3"/>
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,25">
+                <Entry x:Name="searchField" HorizontalOptions="FillAndExpand" Margin="100,0,10,0"/>
+                <Button x:Name="searchBtn" ImageSource="search.png" Clicked="searchBtn_Clicked" TextColor="#eebbc3" Margin="0,0,10,0"></Button>
+            </StackLayout>
+            <Frame CornerRadius="10" Padding="0" HasShadow="False" Margin="10,0,10,25">
+                <TableView Margin="25"></TableView>
+            </Frame>
+        </StackLayout>
+
+    </ContentPage>
+
+</TabbedPage>
+
