@@ -70,9 +70,69 @@
                 <Entry x:Name="searchField" HorizontalOptions="FillAndExpand" Margin="100,0,10,0"/>
                 <Button x:Name="searchBtn" ImageSource="search.png" Clicked="searchBtn_Clicked" TextColor="#eebbc3" Margin="0,0,10,0"></Button>
             </StackLayout>
-            <Frame CornerRadius="10" Padding="0" HasShadow="False" Margin="10,0,10,25">
-                <TableView Margin="25"></TableView>
-            </Frame>
+            <!--<Frame CornerRadius="10" Padding="0" HasShadow="False" Margin="10,0,10,25">
+                <TableView x:Name="pastBudgets" Margin="25"></TableView>
+            </Frame>-->
+            <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Date" TextColor="white" FontSize="24"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Label Text="Balance" TextColor="white" FontSize="24"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Label Text="Expenses" TextColor="white" FontSize="24"/>
+            </StackLayout>
+
+            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+            </StackLayout>
+
+            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+            </StackLayout>
+
+            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+            </StackLayout>
+
+            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+            </StackLayout>
+
+            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                <Entry WidthRequest="125" IsEnabled="False"/>
+            </StackLayout>
+        </StackLayout>
+
         </StackLayout>
 
     </ContentPage>

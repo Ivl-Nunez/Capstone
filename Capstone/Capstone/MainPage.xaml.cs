@@ -5,12 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Capstone
 {
     public partial class MainPage : TabbedPage
     {
+        public StackLayout Content { get; set; }
+
         public MainPage()
         {
             InitializeComponent();
@@ -81,7 +84,21 @@ namespace Capstone
             // (ability to generate reports with multiple columns, multiple rows, date-time stamp, and title)
 
             // If empty, should say something so user knows its not broken
+
+
+            var budgetItems = GetBudgetItemsFromDatabase();
+
+
             DisplayAlert("Past Budget", "You clicked to display past budgets", "Ok");
+        }
+
+        List<Budget> GetBudgetItemsFromDatabase()
+        {
+            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            conn.CreateTable<Budget>();
+            List<Budget> budgetItems = conn.Table<Budget>().ToList();
+            conn.Close();
+            return budgetItems;
         }
 
         void searchBtn_Clicked(System.Object sender, System.EventArgs e)
@@ -105,7 +122,7 @@ namespace Capstone
             //danimation.Commit(currentPage, "PageSlideAnimation", 16, 1000, Easing.CubicOut);
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
@@ -116,10 +133,10 @@ namespace Capstone
             // Find the latest budget and use info to update budget tab
             // Update the balance, due date, free to spend & last budget
             Budget budget = conn.Table<Budget>().OrderByDescending(x => x.Id).FirstOrDefault();
-            moneyInAccount.Text = budget.BankAmount.ToString();
-            nextPayDate.Date = budget.Date.Date;
-            free2Spend.Text = budget.Free2Spend.ToString();
-            lastBudgetDate.Text = budget.LastBudget.ToString();
+            //moneyInAccount.Text = budget.BankAmount.ToString();
+            //nextPayDate.Date = budget.Date.Date;
+            //free2Spend.Text = budget.Free2Spend.ToString();
+            //lastBudgetDate.Text = budget.LastBudget.ToString();
 
             // Update list of expenses
 
