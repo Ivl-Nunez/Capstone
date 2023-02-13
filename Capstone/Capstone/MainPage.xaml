@@ -2,7 +2,7 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Capstone.MainPage" SelectedTabColor="#eebbc3"
-             CurrentPageChanged="TabbedPage_CurrentPageChanged">
+             CurrentPageChanged="TabbedPage_CurrentPageChanged" BackgroundColor="#232946">
 
     <ContentPage
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -40,7 +40,7 @@
                     HeightRequest="100"
                     WidthRequest="100">
                 <StackLayout>
-                <Label Text="{Binding FreeToSpend}"
+                <Label x:Name="free2Spend" Text=""
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
                        TextColor="#fffffe"/>
