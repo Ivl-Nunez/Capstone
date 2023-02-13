@@ -105,6 +105,27 @@ namespace Capstone
             //danimation.Commit(currentPage, "PageSlideAnimation", 16, 1000, Easing.CubicOut);
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            conn.CreateTable<Expense>();
+            conn.CreateTable<Budget>();
+
+            // Find the latest budget and use info to update budget tab
+            // Update the balance, due date, free to spend & last budget
+            Budget budget = conn.Table<Budget>().OrderByDescending(x => x.Id).FirstOrDefault();
+            moneyInAccount.Text = budget.BankAmount.ToString();
+            nextPayDate.Date = budget.Date.Date;
+            free2Spend.Text = budget.Free2Spend.ToString();
+            lastBudgetDate.Text = budget.LastBudget.ToString();
+
+            // Update list of expenses
+
+        }
+
+
     }
 }
 
