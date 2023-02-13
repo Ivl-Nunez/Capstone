@@ -21,7 +21,7 @@
                     <Label Text="Due Date" />
                     <DatePicker x:Name="expenseDueDate"/>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Button x:Name="cancelBtn" Clicked="cancelBtn_Clicked" Text="Cancel" Margin="15" FontSize="32"/>
+                        <Button x:Name="cancelBtn" Clicked="cancelBtn_Clicked" Text="Back" Margin="15" FontSize="32"/>
                         <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="30" FontSize="32"/>
                     </StackLayout>
                 </StackLayout>

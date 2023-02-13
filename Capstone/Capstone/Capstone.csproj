@@ -18,8 +18,10 @@
   <ItemGroup>
     <None Remove="Images\" />
     <None Remove="sqlite-net-pcl" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
