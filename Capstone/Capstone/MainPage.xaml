@@ -12,7 +12,15 @@
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <Label Text="Expenses" FontSize="48" TextColor="#fffffe" HorizontalOptions="Center" Margin="0,25,0,25" />
             <ScrollView>
-
+                <ListView x:Name="listExpenses" BackgroundColor="#0f0e17" RowHeight="100">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                    <Button ClassId="{Binding Id}" Margin="15" Text="{Binding Name}" BackgroundColor="#ff8906" FontSize="32" TextColor="#fffffe"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </ScrollView>
                 <!-- Bound expenses, pulled from db -->
             <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="0,25,75,75" FontSize="48" TextColor="#eebbc3" VerticalOptions="End" HorizontalOptions="End"></Button>

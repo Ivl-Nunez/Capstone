@@ -139,6 +139,12 @@ namespace Capstone
             //lastBudgetDate.Text = budget.LastBudget.ToString();
 
             // Update list of expenses
+            //SQLiteConnection conn = new SQLiteConnection(WGU_Xamarin_Project.App.DatabaseLocation);
+            //conn.CreateTable<Course>();
+            var expenses = conn.Table<Expense>().ToList();
+            conn.Close();
+            listExpenses.ItemsSource = expenses;
+
 
         }
 

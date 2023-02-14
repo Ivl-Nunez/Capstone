@@ -12,3 +12,4 @@
 /Users/michael/Projects/Capstone/Capstone/Capstone/obj/Debug/netstandard2.0/Capstone.dll
 /Users/michael/Projects/Capstone/Capstone/Capstone/obj/Debug/netstandard2.0/ref/Capstone.dll
 /Users/michael/Projects/Capstone/Capstone/Capstone/obj/Debug/netstandard2.0/Capstone.pdb
+/Users/michael/Projects/Capstone/Capstone/Capstone/obj/Debug/netstandard2.0/Capstone.csproj.AssemblyReference.cache
