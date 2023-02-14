@@ -2,10 +2,10 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "sqlite-net-pcl/1.8.116": {
+      "sqlite-net-sqlcipher/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.4"
+          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {
@@ -18,19 +18,18 @@
           }
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.4": {
+      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
+          "SQLitePCLRaw.lib.e_sqlcipher.ios": "2.0.4",
+          "SQLitePCLRaw.provider.internal": "2.0.4"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.core/2.0.4": {
@@ -45,16 +44,28 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+      "SQLitePCLRaw.lib.e_sqlcipher.ios/2.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.internal/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -275,7 +286,7 @@
         "dependencies": {
           "Xamarin.Essentials": "1.7.4",
           "Xamarin.Forms": "5.0.0.2545",
-          "sqlite-net-pcl": "1.8.116"
+          "sqlite-net-sqlcipher": "1.8.116"
         },
         "compile": {
           "bin/placeholder/Capstone.dll": {}
@@ -286,10 +297,10 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "sqlite-net-pcl/1.8.116": {
+      "sqlite-net-sqlcipher/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.4"
+          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {
@@ -302,19 +313,18 @@
           }
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.4": {
+      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
+          "SQLitePCLRaw.lib.e_sqlcipher.ios": "2.0.4",
+          "SQLitePCLRaw.provider.internal": "2.0.4"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.core/2.0.4": {
@@ -329,16 +339,28 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+      "SQLitePCLRaw.lib.e_sqlcipher.ios/2.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.internal/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -559,7 +581,7 @@
         "dependencies": {
           "Xamarin.Essentials": "1.7.4",
           "Xamarin.Forms": "5.0.0.2545",
-          "sqlite-net-pcl": "1.8.116"
+          "sqlite-net-sqlcipher": "1.8.116"
         },
         "compile": {
           "bin/placeholder/Capstone.dll": {}
@@ -570,10 +592,10 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "sqlite-net-pcl/1.8.116": {
+      "sqlite-net-sqlcipher/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.4"
+          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {
@@ -586,19 +608,18 @@
           }
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.4": {
+      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
+          "SQLitePCLRaw.lib.e_sqlcipher.ios": "2.0.4",
+          "SQLitePCLRaw.provider.internal": "2.0.4"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.core/2.0.4": {
@@ -613,16 +634,28 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+      "SQLitePCLRaw.lib.e_sqlcipher.ios/2.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.internal/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -843,7 +876,7 @@
         "dependencies": {
           "Xamarin.Essentials": "1.7.4",
           "Xamarin.Forms": "5.0.0.2545",
-          "sqlite-net-pcl": "1.8.116"
+          "sqlite-net-sqlcipher": "1.8.116"
         },
         "compile": {
           "bin/placeholder/Capstone.dll": {}
@@ -854,10 +887,10 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "sqlite-net-pcl/1.8.116": {
+      "sqlite-net-sqlcipher/1.8.116": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "2.0.4"
+          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
         },
         "compile": {
           "lib/netstandard2.0/SQLite-net.dll": {
@@ -870,19 +903,18 @@
           }
         }
       },
-      "SQLitePCLRaw.bundle_green/2.0.4": {
+      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4",
-          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
+          "SQLitePCLRaw.lib.e_sqlcipher.ios": "2.0.4",
+          "SQLitePCLRaw.provider.internal": "2.0.4"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {},
-          "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll": {}
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.core/2.0.4": {
@@ -897,16 +929,28 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+      "SQLitePCLRaw.lib.e_sqlcipher.ios/2.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.internal/2.0.4": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+          "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -1127,7 +1171,7 @@
         "dependencies": {
           "Xamarin.Essentials": "1.7.4",
           "Xamarin.Forms": "5.0.0.2545",
-          "sqlite-net-pcl": "1.8.116"
+          "sqlite-net-sqlcipher": "1.8.116"
         },
         "compile": {
           "bin/placeholder/Capstone.dll": {}
@@ -1139,10 +1183,10 @@
     }
   },
   "libraries": {
-    "sqlite-net-pcl/1.8.116": {
-      "sha512": "W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
+    "sqlite-net-sqlcipher/1.8.116": {
+      "sha512": "szETpAzrVFkVzN9jS4Zsuo+Ffe2OyKTgyy9NtT1plNZctqzHtLFztlbpiV5XVMJrxNeZp3q+04mYfPEt6n7L8Q==",
       "type": "package",
-      "path": "sqlite-net-pcl/1.8.116",
+      "path": "sqlite-net-sqlcipher/1.8.116",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1150,26 +1194,25 @@
         "Logo-low.png",
         "lib/netstandard2.0/SQLite-net.dll",
         "lib/netstandard2.0/SQLite-net.xml",
-        "sqlite-net-pcl.1.8.116.nupkg.sha512",
-        "sqlite-net-pcl.nuspec"
+        "sqlite-net-sqlcipher.1.8.116.nupkg.sha512",
+        "sqlite-net-sqlcipher.nuspec"
       ]
     },
-    "SQLitePCLRaw.bundle_green/2.0.4": {
-      "sha512": "ubFgOHDmtTcq2LU7Ss10yHnFVMm2rFVr65Ggi+Mh514KjGx4pal98P2zSvZtWf3wbtJw6G1InBgeozBtnpEfKQ==",
+    "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
+      "sha512": "OHRrxNqstRzb7iDOx8EoiIleij9GrW7/6ZoLoA1XzXzLVaaNc6iHS5SkLUXIvuYeGuP51/RGysE5lYPpkjFdXA==",
       "type": "package",
-      "path": "sqlitepclraw.bundle_green/2.0.4",
+      "path": "sqlitepclraw.bundle_e_sqlcipher/2.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
-        "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll",
         "lib/net461/SQLitePCLRaw.batteries_v2.dll",
         "lib/net461/SQLitePCLRaw.nativelibrary.dll",
         "lib/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll",
         "lib/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll",
         "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
-        "sqlitepclraw.bundle_green.nuspec"
+        "sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlcipher.nuspec"
       ]
     },
     "SQLitePCLRaw.core/2.0.4": {
@@ -1184,16 +1227,28 @@
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
-      "sha512": "AY6+vv/4ji1mCkLrS6HP/88rHT9YFKRyg3LUj8RyIk6imJMUFdQDiP8rK8gq0a/0FbqspLjK1t7rtKcr7FXRYA==",
+    "SQLitePCLRaw.lib.e_sqlcipher.ios/2.0.4": {
+      "sha512": "9lcEUfmz9ArytYEaN2z9SJv0ZGOYpIBHp3EcRgKMgIeHmgXTEgh3WxY+oYlsYpihOlt4DxtRyNwAk0TBNe2G5Q==",
       "type": "package",
-      "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.4",
+      "path": "sqlitepclraw.lib.e_sqlcipher.ios/2.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
-        "sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
-        "sqlitepclraw.provider.dynamic_cdecl.nuspec"
+        "lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll",
+        "sqlitepclraw.lib.e_sqlcipher.ios.2.0.4.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlcipher.ios.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.internal/2.0.4": {
+      "sha512": "QkrOWnF1DapA+L+/H69jUvwTZBGQrzuboYHFJXnon5x6LcTJy+ls0Wcqc2/0JQNknKi1NH+2kW8Ud5rrOqsXiA==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.internal/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll",
+        "sqlitepclraw.provider.internal.2.0.4.nupkg.sha512",
+        "sqlitepclraw.provider.internal.nuspec"
       ]
     },
     "System.Buffers/4.4.0": {
@@ -1583,7 +1638,7 @@
       "Capstone >= 1.0.0",
       "Xamarin.Essentials >= 1.7.4",
       "Xamarin.Forms >= 5.0.0.2545",
-      "sqlite-net-pcl >= 1.8.116"
+      "sqlite-net-sqlcipher >= 1.8.116"
     ]
   },
   "packageFolders": {
@@ -1592,11 +1647,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
+      "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
       "projectName": "Capstone.iOS",
-      "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
+      "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
       "packagesPath": "/Users/michael/.nuget/packages/",
-      "outputPath": "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/obj/",
+      "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1611,8 +1666,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj": {
-              "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj"
+            "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj": {
+              "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj"
             }
           }
         }
@@ -1629,7 +1684,7 @@
             "target": "Package",
             "version": "[5.0.0.2545, )"
           },
-          "sqlite-net-pcl": {
+          "sqlite-net-sqlcipher": {
             "target": "Package",
             "version": "[1.8.116, )"
           }

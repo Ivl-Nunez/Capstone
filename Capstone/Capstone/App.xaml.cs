@@ -4,21 +4,21 @@ using Xamarin.Forms.Xaml;
 
 namespace Capstone
 {
-    public partial class App : Application
+    public partial class App : Application // #2 Use of Inheritance
     {
         public static string DatabaseLocation = string.Empty;
         public App ()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Login());
         }
 
         public App(string databaseLocation)
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Login());
 
             DatabaseLocation = databaseLocation;
         }

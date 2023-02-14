@@ -6,7 +6,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Capstone
 {	
-	public partial class AddExpense : ContentPage
+	public partial class AddExpense : ContentPage // #1 Use of Inheritance
 	{	
 		public AddExpense ()
 		{
@@ -48,7 +48,12 @@ namespace Capstone
             // Create connection & add expense
             try
             {
-                SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+                var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
+                                postKeyAction: c =>
+                                {
+                                    c.Execute("PRAGMA cipher_compatibility=3");
+                                });
+                SQLiteConnection conn = new SQLiteConnection(options);
                 conn.CreateTable<Expense>();
                 int rows = conn.Insert(expense);
                 conn.Close();

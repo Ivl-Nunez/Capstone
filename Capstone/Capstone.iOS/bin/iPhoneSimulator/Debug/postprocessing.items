@@ -7,9 +7,9 @@
       <dSYMSourcePathExists>false</dSYMSourcePathExists>
       <NoSymbolStrip>true</NoSymbolStrip>
       <dSYMInfoPlistRelativePath>Capstone.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
-      <SymbolFile>/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list</SymbolFile>
+      <SymbolFile>/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list</SymbolFile>
       <DSymName>Capstone.iOS.app.dSYM</DSymName>
-      <SourceProjectPath>/Users/michael/Projects/Capstone/Capstone/Capstone.iOS</SourceProjectPath>
+      <SourceProjectPath>/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>

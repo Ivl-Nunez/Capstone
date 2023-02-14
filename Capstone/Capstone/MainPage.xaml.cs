@@ -10,9 +10,14 @@ using Xamarin.Forms;
 
 namespace Capstone
 {
-    public partial class MainPage : TabbedPage
+    public partial class MainPage : TabbedPage // #3 Use of Inheritance
     {
-        public StackLayout Content { get; set; }
+        private StackLayout content;
+        public StackLayout Content
+        {
+            get { return content;  }
+            set { content = value;  }
+        }
 
         public MainPage()
         {
@@ -27,6 +32,39 @@ namespace Capstone
             // Brings up new screen, with stuff to add for expense
             await Navigation.PushAsync(new AddExpense());
 
+        }
+
+        void editBtn_Clicked(System.Object sender, System.EventArgs e)
+        {
+            // Bring up new screen, sending over data for filling it in
+            int expenseId = (int)((sender as Button)?.CommandParameter);
+            Navigation.PushAsync(new UpdateExpense(expenseId));
+        }
+
+        async void deleteBtn_Clicked(System.Object sender, System.EventArgs e)
+        {
+            bool result = await DisplayAlert("Confirmation", "Are you sure you want to delete this item?", "Yes", "No");
+
+            if (result)
+            {
+                int item = (int)((sender as Button)?.CommandParameter);
+                // delete the item from the list using the item object
+                var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
+                                postKeyAction: c =>
+                                {
+                                    c.Execute("PRAGMA cipher_compatibility=3");
+                                });
+                SQLiteConnection conn = new SQLiteConnection(options);
+                conn.CreateTable<Expense>();
+                int rows = conn.Delete<Expense>(item);
+                if (rows > 0) DisplayAlert("Success", "Deleted Expense", "Ok");
+                else DisplayAlert("Error", "Failed to delete expense", "Ok");
+                OnAppearing();
+            }
+            else
+            {
+                Navigation.PopAsync();
+            }
         }
 
 
@@ -50,7 +88,12 @@ namespace Capstone
                 LastBudget = DateTime.Now
             };
 
-            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
+                            postKeyAction: c =>
+                            {
+                                c.Execute("PRAGMA cipher_compatibility=3");
+                            });
+            SQLiteConnection conn = new SQLiteConnection(options);
             conn.CreateTable<Budget>();
             int rows = conn.Insert(budget);
             conn.Close();
@@ -67,7 +110,12 @@ namespace Capstone
         // Gets the total of expenses where the due date is between NOW & Next Pay
         float getExpenseTotal()
         {
-            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
+                            postKeyAction: c =>
+                            {
+                                c.Execute("PRAGMA cipher_compatibility=3");
+                            });
+            SQLiteConnection conn = new SQLiteConnection(options);
             conn.CreateTable<Expense>();
             return conn.Table<Expense>()
                 .Where(x => x.DueDate >= DateTime.Now && x.DueDate <= nextPayDate.Date)
@@ -94,7 +142,12 @@ namespace Capstone
 
         List<Budget> GetBudgetItemsFromDatabase()
         {
-            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
+                            postKeyAction: c =>
+                            {
+                                c.Execute("PRAGMA cipher_compatibility=3");
+                            });
+            SQLiteConnection conn = new SQLiteConnection(options);
             conn.CreateTable<Budget>();
             List<Budget> budgetItems = conn.Table<Budget>().ToList();
             conn.Close();
@@ -122,11 +175,16 @@ namespace Capstone
             //danimation.Commit(currentPage, "PageSlideAnimation", 16, 1000, Easing.CubicOut);
         }
 
-        protected override async void OnAppearing()
+        protected override async void OnAppearing() // #1 Use of Polymorphism
         {
             base.OnAppearing();
 
-            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
+                            postKeyAction: c =>
+                            {
+                                c.Execute("PRAGMA cipher_compatibility=3");
+                            });
+            SQLiteConnection conn = new SQLiteConnection(options);
             conn.CreateTable<Expense>();
             conn.CreateTable<Budget>();
 
@@ -147,7 +205,6 @@ namespace Capstone
 
 
         }
-
 
     }
 }

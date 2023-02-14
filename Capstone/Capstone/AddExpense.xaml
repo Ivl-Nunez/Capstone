@@ -7,25 +7,27 @@
     ios:Page.UseSafeArea="true"
     BackgroundColor="black">
     <ContentPage.Content>
-        <Frame Padding="10" Margin="15, 250, 15, 250"
+        <ScrollView>
+            <Frame Margin="5, 100, 5, 100"
                     BackgroundColor="LightGray"
                     CornerRadius="10"
                     HeightRequest="50"
                     WidthRequest="50"
                     >
                 <StackLayout VerticalOptions="Center">
-                    <Label Text="Name" />
-                    <Entry x:Name="expenseName"/>
-                    <Label Text="Amount" />
-                    <Entry x:Name="expenseAmount"/>
-                    <Label Text="Due Date" />
+                    <Label Text="Name" FontFamily="Marker Felt"/>
+                    <Entry x:Name="expenseName" FontFamily="Marker Felt"/>
+                    <Label Text="Amount" FontFamily="Marker Felt"/>
+                    <Entry x:Name="expenseAmount" FontFamily="Marker Felt"/>
+                    <Label Text="Due Date" FontFamily="Marker Felt"/>
                     <DatePicker x:Name="expenseDueDate"/>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Button x:Name="cancelBtn" Clicked="cancelBtn_Clicked" Text="Back" Margin="15" FontSize="32"/>
-                        <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="30" FontSize="32"/>
+                        <Button x:Name="cancelBtn" Clicked="cancelBtn_Clicked" Text="Back" Margin="15" FontSize="32" FontFamily="Marker Felt"/>
+                        <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="30" FontSize="32" FontFamily="Marker Felt"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
 

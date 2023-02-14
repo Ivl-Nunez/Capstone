@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michael/Projects/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj": {}
+    "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj": {}
   },
   "projects": {
-    "/Users/michael/Projects/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj": {
+    "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michael/Projects/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj",
+        "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj",
         "projectName": "Capstone.Android",
-        "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj",
+        "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj",
         "packagesPath": "/Users/michael/.nuget/packages/",
-        "outputPath": "/Users/michael/Projects/Capstone/Capstone/Capstone.Android/obj/",
+        "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj": {
-                "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj"
+              "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj": {
+                "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj"
               }
             }
           }
@@ -44,7 +44,7 @@
               "target": "Package",
               "version": "[5.0.0.2545, )"
             },
-            "sqlite-net-pcl": {
+            "sqlite-net-sqlcipher": {
               "target": "Package",
               "version": "[1.8.116, )"
             }
@@ -52,14 +52,14 @@
         }
       }
     },
-    "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj": {
+    "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj",
+        "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj",
         "projectName": "Capstone",
-        "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj",
+        "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj",
         "packagesPath": "/Users/michael/.nuget/packages/",
-        "outputPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/obj/",
+        "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/michael/.config/NuGet/NuGet.Config"
@@ -100,7 +100,7 @@
               "target": "Package",
               "version": "[5.0.0.2545, )"
             },
-            "sqlite-net-pcl": {
+            "sqlite-net-sqlcipher": {
               "target": "Package",
               "version": "[1.8.116, )"
             }

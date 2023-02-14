@@ -80,7 +80,7 @@ target triple = "aarch64-unknown-linux-android"
 @__app_environment_variables_n_1.2 = internal constant [15 x i8] c"MONO_LOG_LEVEL\00", align 1
 @__app_environment_variables_v_1.3 = internal constant [5 x i8] c"info\00", align 1
 @__app_environment_variables_n_2.4 = internal constant [17 x i8] c"XAMARIN_BUILD_ID\00", align 1
-@__app_environment_variables_v_2.5 = internal constant [37 x i8] c"e555993f-5bdd-4b10-b0f1-88960156eb0d\00", align 1
+@__app_environment_variables_v_2.5 = internal constant [37 x i8] c"737eecdd-05c3-488a-9884-fb574620a11c\00", align 1
 @__app_environment_variables_n_3.6 = internal constant [28 x i8] c"XA_HTTP_CLIENT_HANDLER_TYPE\00", align 1
 @__app_environment_variables_v_3.7 = internal constant [41 x i8] c"Xamarin.Android.Net.AndroidClientHandler\00", align 1
 @__app_environment_variables_n_4.8 = internal constant [16 x i8] c"XA_TLS_PROVIDER\00", align 1
@@ -139,8 +139,8 @@ target triple = "aarch64-unknown-linux-android"
 @__DSOCacheEntry_name.1 = internal constant [18 x i8] c"libmono-native.so\00", align 1
 @__DSOCacheEntry_name.2 = internal constant [24 x i8] c"libmono-profiler-log.so\00", align 1
 @__DSOCacheEntry_name.3 = internal constant [31 x i8] c"libxamarin-debug-app-helper.so\00", align 1
-@__DSOCacheEntry_name.4 = internal constant [16 x i8] c"libe_sqlite3.so\00", align 1
-@__DSOCacheEntry_name.5 = internal constant [23 x i8] c"libmono-btls-shared.so\00", align 1
+@__DSOCacheEntry_name.4 = internal constant [23 x i8] c"libmono-btls-shared.so\00", align 1
+@__DSOCacheEntry_name.5 = internal constant [18 x i8] c"libe_sqlcipher.so\00", align 1
 @__DSOCacheEntry_name.6 = internal constant [16 x i8] c"libmonodroid.so\00", align 1
 @__DSOCacheEntry_name.7 = internal constant [22 x i8] c"libxa-internal-api.so\00", align 1
 @__DSOCacheEntry_name.8 = internal constant [19 x i8] c"libmonosgen-2.0.so\00", align 1
@@ -170,16 +170,16 @@ target triple = "aarch64-unknown-linux-android"
 	}, 
 	; 3
 	%struct.DSOCacheEntry {
-		i64 3207715548900369358, ; hash 0x2c84184be8b423ce, from name: e_sqlite3.so
+		i64 3245573717126666778, ; hash 0x2d0a981995adda1a, from name: mono-btls-shared
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 4
 	%struct.DSOCacheEntry {
-		i64 3245573717126666778, ; hash 0x2d0a981995adda1a, from name: mono-btls-shared
+		i64 3452452921003304563, ; hash 0x2fe993a3c8296673, from name: e_sqlcipher
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 5
@@ -193,14 +193,14 @@ target triple = "aarch64-unknown-linux-android"
 	%struct.DSOCacheEntry {
 		i64 3883875758066343538, ; hash 0x35e64c6c9f4b9e72, from name: libmono-btls-shared
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 7
 	%struct.DSOCacheEntry {
-		i64 4459893396487739745, ; hash 0x3de4b96a21c31961, from name: libe_sqlite3.so
+		i64 5307006030405502290, ; hash 0x49a645ddef2d0552, from name: libe_sqlcipher
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 8
@@ -247,79 +247,79 @@ target triple = "aarch64-unknown-linux-android"
 	}, 
 	; 14
 	%struct.DSOCacheEntry {
-		i64 8027067278921088108, ; hash 0x6f65df293440bc6c, from name: libe_sqlite3
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 15
-	%struct.DSOCacheEntry {
 		i64 8392333777418328833, ; hash 0x74778f1b27881b01, from name: libmonodroid.so
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 16
+	; 15
 	%struct.DSOCacheEntry {
 		i64 8673945120601860270, ; hash 0x78600b2172b4e8ae, from name: mono-btls-shared.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 17
-	%struct.DSOCacheEntry {
-		i64 8996927521954684202, ; hash 0x7cdb81e9d80b5d2a, from name: e_sqlite3
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 18
+	; 16
 	%struct.DSOCacheEntry {
 		i64 9055317871244365271, ; hash 0x7daaf3a073c44dd7, from name: monodroid
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 19
+	; 17
 	%struct.DSOCacheEntry {
 		i64 9338662132064502671, ; hash 0x819997bb1318c38f, from name: xa-internal-api.so
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 20
+	; 18
 	%struct.DSOCacheEntry {
 		i64 10207954440838677834, ; hash 0x8da9f07ad98f854a, from name: mono-native.so
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.1, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 21
+	; 19
 	%struct.DSOCacheEntry {
 		i64 10484826484908863027, ; hash 0x918196231499ae33, from name: xamarin-debug-app-helper
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([31 x i8], [31 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 22
+	; 20
 	%struct.DSOCacheEntry {
 		i64 11521729796983092563, ; hash 0x9fe56834a335f553, from name: libmonodroid
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 23
+	; 21
+	%struct.DSOCacheEntry {
+		i64 11849377614375267324, ; hash 0xa4717228da4dabfc, from name: e_sqlcipher.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 22
 	%struct.DSOCacheEntry {
 		i64 12988035350267542210, ; hash 0xb43ec55666e9bac2, from name: xa-internal-api
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 24
+	; 23
 	%struct.DSOCacheEntry {
 		i64 13380041663667534323, ; hash 0xb9af7500aad479f3, from name: libmono-btls-shared.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 24
+	%struct.DSOCacheEntry {
+		i64 14386979145226910985, ; hash 0xc7a8d14e9e33fd09, from name: libe_sqlcipher.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 25

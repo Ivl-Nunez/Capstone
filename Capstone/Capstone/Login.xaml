@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Capstone.Login" BackgroundColor="black">
+    <ContentPage.Content>
+
+
+        <StackLayout>
+            <Label Text="Simple Budget!" TextColor="White" FontSize="48" FontFamily="Marker Felt" HorizontalOptions="Center" Margin="0,80,0,0" />
+            <Frame Margin="5,125,5,0"
+                    BackgroundColor="LightGray"
+                    CornerRadius="10"
+                    >
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="UserName" FontFamily="Marker Felt"/>
+                    <Entry x:Name="username" FontFamily="Marker Felt"/>
+                    <Label Text="Password" FontFamily="Marker Felt"/>
+                    <Entry x:Name="password" IsPassword="True" FontFamily="Marker Felt"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button x:Name="createBtn" Clicked="createBtn_Clicked" Text="Create" Margin="0,0,50,0" FontSize="32" FontFamily="Marker Felt"/>
+                        <Button x:Name="loginBtn" Clicked="loginBtn_Clicked" Text="Login"  FontSize="32" FontFamily="Marker Felt"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
+

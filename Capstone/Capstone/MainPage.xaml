@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Capstone.MainPage" SelectedTabColor="#eebbc3"
+             x:Class="Capstone.MainPage" SelectedTabColor="#eebbc3" UnselectedTabColor="black" 
              CurrentPageChanged="TabbedPage_CurrentPageChanged" BackgroundColor="#232946">
 
     <ContentPage
@@ -10,20 +10,35 @@
              IconImageSource="moneybag2.png"
              BackgroundColor="#232946">
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <Label Text="Expenses" FontSize="48" TextColor="#fffffe" HorizontalOptions="Center" Margin="0,25,0,25" />
+            <Label Text="Expenses" FontSize="48" TextColor="#fffffe" HorizontalOptions="Center" Margin="0,25,0,25" FontFamily="Marker Felt"/>
             <ScrollView>
                 <ListView x:Name="listExpenses" BackgroundColor="#0f0e17" RowHeight="100">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                    <Button ClassId="{Binding Id}" Margin="15" Text="{Binding Name}" BackgroundColor="#ff8906" FontSize="32" TextColor="#fffffe"/>
+                                    <!--<Button ClassId="{Binding Id}" Margin="15" Text="{Binding Name}" BackgroundColor="#ff8906" FontSize="32" TextColor="#fffffe"/>-->
+                                    <StackLayout Orientation="Horizontal" Margin="20">
+                                        <StackLayout HorizontalOptions="FillAndExpand">
+                                            <StackLayout><Entry Text="{Binding Name}" IsEnabled="False" BackgroundColor="#AAAAAA"/></StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Amount}" IsEnabled="False" BackgroundColor="#AAAAAA"/>
+                                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding DueDate}" IsEnabled="False" BackgroundColor="#AAAAAA"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                                                <Button x:Name="editBtn" ImageSource="edit.png" Clicked="editBtn_Clicked" CommandParameter="{Binding Id}"></Button>
+                                                <Button x:Name="deleteBtn" ImageSource="delete.png" Clicked="deleteBtn_Clicked" CommandParameter="{Binding Id}"></Button>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollView>
                 <!-- Bound expenses, pulled from db -->
-            <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="0,25,75,75" FontSize="48" TextColor="#eebbc3" VerticalOptions="End" HorizontalOptions="End"></Button>
+            <Button x:Name="addBtn" Clicked="addBtn_Clicked" Text="Add" Margin="0,25,75,75" FontSize="48" TextColor="#eebbc3" VerticalOptions="End" HorizontalOptions="End" FontFamily="Marker Felt"></Button>
         </StackLayout>
     </ContentPage>
 
@@ -36,30 +51,32 @@
         IconImageSource="home.png"
         BackgroundColor="#232946">
 
-        <StackLayout HorizontalOptions="Center">
-            <Label Text="Money in Account" FontSize="32" Margin="0,50,0,0" TextColor="#fffffe"/>
-            <Entry x:Name="moneyInAccount" Margin="0,0,0,50"/>
-            <Label Text="Next Pay Date" FontSize="32" TextColor="#fffffe"/>
-            <DatePicker x:Name="nextPayDate" Margin="0,0,0,50"/>
-            <Label Text="Free to Spend" FontSize="32" TextColor="#fffffe"/>
-            <Frame Padding="10"
-                    BackgroundColor="LightGray"
-                    CornerRadius="10"
-                    HeightRequest="100"
-                    WidthRequest="100">
-                <StackLayout>
-                <Label x:Name="free2Spend" Text=""
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                       TextColor="#fffffe"/>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Money in Account" FontSize="32" Margin="0,50,0,0" TextColor="#fffffe" FontFamily="Marker Felt"/>
+                <Entry x:Name="moneyInAccount" Margin="0,0,0,50" FontFamily="Marker Felt"/>
+                <Label Text="Next Pay Date" FontSize="32" TextColor="#fffffe" FontFamily="Marker Felt"/>
+                <DatePicker x:Name="nextPayDate" Margin="0,0,0,50" FontFamily="Marker Felt"/>
+                <Label Text="Free to Spend" FontSize="32" TextColor="#fffffe" FontFamily="Marker Felt"/>
+                <Frame Padding="10"
+                        BackgroundColor="LightGray"
+                        CornerRadius="10"
+                        HeightRequest="100"
+                        WidthRequest="100">
+                    <StackLayout>
+                    <Label x:Name="free2Spend" Text=""
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                           TextColor="#fffffe" FontFamily="Marker Felt"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
+                    <Label Text="Last Date Budgeted: " FontSize="14" TextColor="#fffffe" FontFamily="Marker Felt"/>
+                    <Label x:Name="lastBudgetDate" Text="N/A" FontSize="14" TextColor="#fffffe" FontFamily="Marker Felt"/>
                 </StackLayout>
-            </Frame>
-            <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
-                <Label Text="Last Date Budgeted: " FontSize="14" TextColor="#fffffe"/>
-                <Label x:Name="lastBudgetDate" Text="N/A" FontSize="14" TextColor="#fffffe"/>
+                <Button x:Name="budgetBtn" Text="Budget!" FontSize="64" Clicked="budgetBtn_Clicked" TextColor="#eebbc3" FontFamily="Marker Felt"/>
             </StackLayout>
-            <Button x:Name="budgetBtn" Text="Budget!" FontSize="64" Clicked="budgetBtn_Clicked" TextColor="#eebbc3"/>
-        </StackLayout>
+        </ScrollView>
 
     </ContentPage>
 
@@ -72,77 +89,78 @@
         IconImageSource="reports2.png"
         BackgroundColor="#232946">
 
-        <StackLayout>
-            <Button x:Name="pastBudgetsBtn" Margin="0,75,0,75" Text="Past Budgets" FontSize="48" Clicked="pastBudgetsBtn_Clicked" TextColor="#eebbc3"/>
-            <StackLayout Orientation="Horizontal" Margin="0,0,0,25">
-                <Entry x:Name="searchField" HorizontalOptions="FillAndExpand" Margin="100,0,10,0"/>
-                <Button x:Name="searchBtn" ImageSource="search.png" Clicked="searchBtn_Clicked" TextColor="#eebbc3" Margin="0,0,10,0"></Button>
-            </StackLayout>
-            <!--<Frame CornerRadius="10" Padding="0" HasShadow="False" Margin="10,0,10,25">
-                <TableView x:Name="pastBudgets" Margin="25"></TableView>
-            </Frame>-->
+        <ScrollView>
             <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Date" TextColor="white" FontSize="24"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Label Text="Balance" TextColor="white" FontSize="24"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Label Text="Expenses" TextColor="white" FontSize="24"/>
+                <Button x:Name="pastBudgetsBtn" Margin="0,75,0,75" Text="Past Budgets" FontSize="48" Clicked="pastBudgetsBtn_Clicked" TextColor="#eebbc3" FontFamily="Marker Felt"/>
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,25">
+                    <Entry x:Name="searchField" HorizontalOptions="FillAndExpand" Margin="100,0,10,0" FontFamily="Marker Felt"/>
+                    <Button x:Name="searchBtn" ImageSource="search.png" Clicked="searchBtn_Clicked" TextColor="#eebbc3" Margin="0,0,10,0" FontFamily="Marker Felt"></Button>
+                </StackLayout>
+                <!--<Frame CornerRadius="10" Padding="0" HasShadow="False" Margin="10,0,10,25">
+                    <TableView x:Name="pastBudgets" Margin="25"></TableView>
+                </Frame>-->
+                <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Date" TextColor="white" FontSize="24" FontFamily="Marker Felt"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Label Text="Balance" TextColor="white" FontSize="24" FontFamily="Marker Felt"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Label Text="Expenses" TextColor="white" FontSize="24" FontFamily="Marker Felt"/>
+                </StackLayout>
+
+                <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                </StackLayout>
+
+                <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                </StackLayout>
+
+                <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                </StackLayout>
+
+                <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                </StackLayout>
+
+                <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
+                    <Entry WidthRequest="125" IsEnabled="False"/>
+                </StackLayout>
             </StackLayout>
 
-            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
             </StackLayout>
-
-            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-            </StackLayout>
-
-            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-            </StackLayout>
-
-            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-            </StackLayout>
-
-            <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-                <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                <Entry WidthRequest="125" IsEnabled="False"/>
-            </StackLayout>
-        </StackLayout>
-
-        </StackLayout>
-
+        </ScrollView>
     </ContentPage>
 
 </TabbedPage>

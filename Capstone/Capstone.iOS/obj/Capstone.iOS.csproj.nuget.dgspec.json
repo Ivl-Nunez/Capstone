@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj": {}
+    "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj": {}
   },
   "projects": {
-    "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj": {
+    "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
+        "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
         "projectName": "Capstone.iOS",
-        "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
+        "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
         "packagesPath": "/Users/michael/.nuget/packages/",
-        "outputPath": "/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/obj/",
+        "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj": {
-                "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj"
+              "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj": {
+                "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj"
               }
             }
           }
@@ -44,7 +44,7 @@
               "target": "Package",
               "version": "[5.0.0.2545, )"
             },
-            "sqlite-net-pcl": {
+            "sqlite-net-sqlcipher": {
               "target": "Package",
               "version": "[1.8.116, )"
             }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj": {
+    "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj",
+        "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj",
         "projectName": "Capstone",
-        "projectPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/Capstone.csproj",
+        "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj",
         "packagesPath": "/Users/michael/.nuget/packages/",
-        "outputPath": "/Users/michael/Projects/Capstone/Capstone/Capstone/obj/",
+        "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/michael/.config/NuGet/NuGet.Config"
@@ -111,7 +111,7 @@
               "target": "Package",
               "version": "[5.0.0.2545, )"
             },
-            "sqlite-net-pcl": {
+            "sqlite-net-sqlcipher": {
               "target": "Package",
               "version": "[1.8.116, )"
             }

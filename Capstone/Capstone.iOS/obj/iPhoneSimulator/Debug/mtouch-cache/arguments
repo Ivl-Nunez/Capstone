@@ -4,19 +4,19 @@
 	--sgen-conc \
 	'/target-framework:Xamarin.iOS,Version=v1.0' \
 	--http-message-handler=NSUrlSessionHandler \
-	--cache=/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
-	--root-assembly=/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Capstone.iOS.exe \
+	--cache=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--root-assembly=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Capstone.iOS.exe \
 	--sdkroot=/Applications/Xcode.app/Contents/Developer \
 	--targetver=8.0 \
-	--sim=/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Capstone.iOS.app \
+	--sim=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Capstone.iOS.app \
 	--executable=Capstone.iOS \
 	--nolink \
 	--sdk=16.1 \
 	--aot-options=-O=-float32 \
 	--abi=x86_64 \
-	--symbollist=/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	--symbollist=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
 	--dsym=no \
-	--reference=/Users/michael/Projects/Capstone/Capstone/Capstone/bin/Debug/netstandard2.0/Capstone.dll \
+	--reference=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/bin/Debug/netstandard2.0/Capstone.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/OpenTK-1.0.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Buffers.dll \
@@ -168,11 +168,11 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
-	--reference=/Users/michael/.nuget/packages/sqlite-net-pcl/1.8.116/lib/netstandard2.0/SQLite-net.dll \
-	--reference=/Users/michael/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
-	--reference=/Users/michael/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll \
+	--reference=/Users/michael/.nuget/packages/sqlite-net-sqlcipher/1.8.116/lib/netstandard2.0/SQLite-net.dll \
+	--reference=/Users/michael/.nuget/packages/sqlitepclraw.bundle_e_sqlcipher/2.0.4/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
 	--reference=/Users/michael/.nuget/packages/sqlitepclraw.core/2.0.4/lib/netstandard2.0/SQLitePCLRaw.core.dll \
-	--reference=/Users/michael/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.4/lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll \
+	--reference=/Users/michael/.nuget/packages/sqlitepclraw.lib.e_sqlcipher.ios/2.0.4/lib/xamarinios10/SQLitePCLRaw.lib.e_sqlcipher.ios.dll \
+	--reference=/Users/michael/.nuget/packages/sqlitepclraw.provider.internal/2.0.4/lib/netstandard2.0/SQLitePCLRaw.provider.internal.dll \
 	--reference=/Users/michael/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	--reference=/Users/michael/.nuget/packages/xamarin.essentials/1.7.4/lib/xamarinios10/Xamarin.Essentials.dll \
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
@@ -213,5 +213,5 @@
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll \
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll \
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
-	--reference=/Users/michael/Projects/Capstone/Capstone/Capstone/bin/Debug/netstandard2.0/Capstone.dll \
-	@/Users/michael/Projects/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/response-file.rsp \
+	--reference=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/bin/Debug/netstandard2.0/Capstone.dll \
+	@/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/response-file.rsp \
