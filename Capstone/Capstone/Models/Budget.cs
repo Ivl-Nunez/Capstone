@@ -7,6 +7,7 @@ namespace Capstone
 	{
 		[PrimaryKey, AutoIncrement]
 		public int Id { get; set; }
+		public string Username { get; set; }
 		public DateTime Date { get; set; }
 		public float BankAmount { get; set; }
 		public float ExpenseTotal { get; set; }

@@ -7,9 +7,16 @@ using static System.Net.Mime.MediaTypeNames;
 namespace Capstone
 {	
 	public partial class AddExpense : ContentPage // #1 Use of Inheritance
-	{	
-		public AddExpense ()
+	{
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+		public AddExpense (string username)
 		{
+            this.Username = username;
 			InitializeComponent ();
 		}
 
@@ -40,6 +47,7 @@ namespace Capstone
             // Create expense
             Expense expense = new Expense()
             {
+                Username = this.Username,
                 Name = string.IsNullOrEmpty(expenseName.Text) ? "" : expenseName.Text,
                 Amount = float.Parse(string.IsNullOrEmpty(expenseAmount.Text) ? "0" : expenseAmount.Text),
                 DueDate = expenseDueDate.Date,

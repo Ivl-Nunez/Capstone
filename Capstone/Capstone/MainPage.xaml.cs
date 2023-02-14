@@ -13,14 +13,21 @@ namespace Capstone
     public partial class MainPage : TabbedPage // #3 Use of Inheritance
     {
         private StackLayout content;
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
         public StackLayout Content
         {
             get { return content;  }
             set { content = value;  }
         }
 
-        public MainPage()
+        public MainPage(string username)
         {
+            this.Username = username;
             InitializeComponent();
         }
 
@@ -30,7 +37,7 @@ namespace Capstone
         async void addBtn_Clicked(System.Object sender, System.EventArgs e)
         {
             // Brings up new screen, with stuff to add for expense
-            await Navigation.PushAsync(new AddExpense());
+            await Navigation.PushAsync(new AddExpense(this.Username));
 
         }
 
@@ -38,7 +45,7 @@ namespace Capstone
         {
             // Bring up new screen, sending over data for filling it in
             int expenseId = (int)((sender as Button)?.CommandParameter);
-            Navigation.PushAsync(new UpdateExpense(expenseId));
+            Navigation.PushAsync(new UpdateExpense(expenseId, this.Username));
         }
 
         async void deleteBtn_Clicked(System.Object sender, System.EventArgs e)
@@ -61,10 +68,6 @@ namespace Capstone
                 else DisplayAlert("Error", "Failed to delete expense", "Ok");
                 OnAppearing();
             }
-            else
-            {
-                Navigation.PopAsync();
-            }
         }
 
 
@@ -81,6 +84,7 @@ namespace Capstone
             // Create budget
             Budget budget = new Budget()
             {
+                Username = this.Username, 
                 Date = nextPayDate.Date,
                 BankAmount = float.Parse(moneyInAccount.Text),
                 ExpenseTotal = getExpenseTotal(),
@@ -190,7 +194,7 @@ namespace Capstone
 
             // Find the latest budget and use info to update budget tab
             // Update the balance, due date, free to spend & last budget
-            Budget budget = conn.Table<Budget>().OrderByDescending(x => x.Id).FirstOrDefault();
+            Budget budget = conn.Table<Budget>().OrderByDescending(x => x.Id).Where(x => x.Username == this.Username).FirstOrDefault();
             //moneyInAccount.Text = budget.BankAmount.ToString();
             //nextPayDate.Date = budget.Date.Date;
             //free2Spend.Text = budget.Free2Spend.ToString();
@@ -199,7 +203,7 @@ namespace Capstone
             // Update list of expenses
             //SQLiteConnection conn = new SQLiteConnection(WGU_Xamarin_Project.App.DatabaseLocation);
             //conn.CreateTable<Course>();
-            var expenses = conn.Table<Expense>().ToList();
+            var expenses = conn.Table<Expense>().Where(x => x.Username == this.Username).ToList();
             conn.Close();
             listExpenses.ItemsSource = expenses;
 

@@ -39,7 +39,7 @@ namespace Capstone
             if (result != null)
             {
                 // Login pass creds
-                Navigation.PushAsync(new MainPage());
+                Navigation.PushAsync(new MainPage(result.Username));
                 conn.Close();
             }
             else
@@ -48,9 +48,6 @@ namespace Capstone
                 conn.Close();
                 return;
             }
-
-            // If not, say no match
-            // If yes, move to mainPage passing userName
         }
 
         void createBtn_Clicked(System.Object sender, System.EventArgs e)
@@ -95,7 +92,7 @@ namespace Capstone
                 int rows = conn.Insert(login);
                 if (rows > 0)
                 {
-                    Navigation.PushAsync(new MainPage());
+                    Navigation.PushAsync(new MainPage(result.Username));
                 }
                 else
                 {

@@ -10,14 +10,21 @@ namespace Capstone
 	{
         // #2 Use of Encapsulation
         private int expenseId;
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
         public int ExpenseId 
         {
             get { return expenseId; }
             set { expenseId = value; }
         }
-        public UpdateExpense(int expenseId)
+        public UpdateExpense(int expenseId, string username)
 		{
             this.ExpenseId = expenseId;
+            this.Username = username;
 			InitializeComponent ();
 		}
 
@@ -66,6 +73,7 @@ namespace Capstone
             Expense expense = new Expense()
             {
                 Id = this.ExpenseId,
+                Username = this.Username,
                 Name = string.IsNullOrEmpty(expenseName.Text) ? "" : expenseName.Text,
                 Amount = float.Parse(string.IsNullOrEmpty(expenseAmount.Text) ? "0" : expenseAmount.Text),
                 DueDate = expenseDueDate.Date,
