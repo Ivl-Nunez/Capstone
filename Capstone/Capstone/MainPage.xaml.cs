@@ -29,22 +29,19 @@ namespace Capstone
         {
             this.Username = username;
             InitializeComponent();
-            //BindingContext = new Models.BudgetModelView();
         }
 
         /********************
          ***** EXPENSES *****
          ********************/
-        async void addBtn_Clicked(System.Object sender, System.EventArgs e)
+        void addBtn_Clicked(System.Object sender, System.EventArgs e)
         {
-            // Brings up new screen, with stuff to add for expense
-            await Navigation.PushAsync(new AddExpense(this.Username));
+            Navigation.PushAsync(new AddExpense(this.Username));
 
         }
 
         void editBtn_Clicked(System.Object sender, System.EventArgs e)
         {
-            // Bring up new screen, sending over data for filling it in
             int expenseId = (int)((sender as Button)?.CommandParameter);
             Navigation.PushAsync(new UpdateExpense(expenseId, this.Username));
         }
@@ -56,6 +53,7 @@ namespace Capstone
             if (result)
             {
                 int item = (int)((sender as Button)?.CommandParameter);
+
                 // delete the item from the list using the item object
                 var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
                                 postKeyAction: c =>
@@ -65,8 +63,8 @@ namespace Capstone
                 SQLiteConnection conn = new SQLiteConnection(options);
                 conn.CreateTable<Expense>();
                 int rows = conn.Delete<Expense>(item);
-                if (rows > 0) DisplayAlert("Success", "Deleted Expense", "Ok");
-                else DisplayAlert("Error", "Failed to delete expense", "Ok");
+                if (rows > 0) await DisplayAlert("Success", "Deleted Expense", "Ok");
+                else await DisplayAlert("Error", "Failed to delete expense", "Ok");
                 OnAppearing();
             }
         }
@@ -133,12 +131,6 @@ namespace Capstone
          *******************/
         void pastBudgetsBtn_Clicked(System.Object sender, System.EventArgs e)
         {
-            // Needs to pull informatino regarding past budgets and display them in a table form (rows / columns)
-            // (ability to generate reports with multiple columns, multiple rows, date-time stamp, and title)
-
-            // If empty, should say something so user knows its not broken
-
-
             var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
                             postKeyAction: c =>
                             {
@@ -154,7 +146,7 @@ namespace Capstone
                 entryA1.Text = budgetItems[0].Date.ToString() ?? "";
                 entryA2.Text = budgetItems[0].Username ?? "";
                 entryA3.Text = budgetItems[0].Free2Spend.ToString() ?? "";
-            }
+            } else { DisplayAlert("Empty", "There is not budget history", "Ok"); }
 
             if (budgetItems.Count > 1)
             {
@@ -267,19 +259,7 @@ namespace Capstone
             }
         }
 
-
-
-
-
-        private void TabbedPage_CurrentPageChanged(object sender, EventArgs e)
-        {
-            //var tabbedPage = (TabbedPage)sender;
-            //var currentPage = tabbedPage.CurrentPage;
-            //var animation = new Animation(v => currentPage.TranslationX = v, 0, -1000);
-            //danimation.Commit(currentPage, "PageSlideAnimation", 16, 1000, Easing.CubicOut);
-        }
-
-        protected override async void OnAppearing() // #1 Use of Polymorphism
+        protected override void OnAppearing() // #1 Use of Polymorphism
         {
             base.OnAppearing();
 
@@ -306,8 +286,6 @@ namespace Capstone
             var expenses = conn.Table<Expense>().Where(x => x.Username == this.Username).ToList();
             conn.Close();
             listExpenses.ItemsSource = expenses;
-
-
         }
 
     }

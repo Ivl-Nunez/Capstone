@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Lf5E5SfKAJp1Raqz0eCWOUvXb1EDg311jcz3Vw4D830qk00NEXbm8rkEx5nBHEC5YBPxt4OghwdYIs504EL68Q==",
+  "dgSpecHash": "xLIGmrCNCU3M55og9Qr6b2oFV9KasM+QuQ8TrAhWEEmKvcR0o26TXeygpaOSm0/yLg5B53jmowpXRTBR9Q6RHA==",
   "success": true,
   "projectFilePath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "/Users/michael/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/michael/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/michael/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "/Users/michael/.nuget/packages/xamarin.essentials/1.7.4/xamarin.essentials.1.7.4.nupkg.sha512",
+    "/Users/michael/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512"
   ],
   "logs": []

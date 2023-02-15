@@ -38,7 +38,7 @@
           "dependencies": {
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.4, )"
+              "version": "[1.7.5, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -105,7 +105,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.4, )"
+              "version": "[1.7.5, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

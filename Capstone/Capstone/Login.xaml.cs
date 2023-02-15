@@ -12,6 +12,7 @@ namespace Capstone
             InitializeComponent();
         }
 
+        /** LOGIC FOR LOGGING WITH EXISTING ACCOUNT **/
         void loginBtn_Clicked(System.Object sender, System.EventArgs e)
         {
             // Input validation (null, trim)
@@ -36,12 +37,14 @@ namespace Capstone
             conn.CreateTable<Models.LoginModel>();
             string userName = username.Text;
             var result = conn.Table<Models.LoginModel>().Where(v => v.Username == username.Text && v.Password == password.Text).FirstOrDefault();
+
+            // Login Successful
             if (result != null)
             {
-                // Login pass creds
                 Navigation.PushAsync(new MainPage(result.Username));
                 conn.Close();
             }
+            // Failed to Login
             else
             {
                 DisplayAlert("Error", "Incorrect Credentials", "Ok");
@@ -50,6 +53,8 @@ namespace Capstone
             }
         }
 
+
+        /** LOGIC FOR CREATING A NEW ACCOUNT **/
         void createBtn_Clicked(System.Object sender, System.EventArgs e)
         {
             // Input validation (null, trim)
@@ -64,7 +69,7 @@ namespace Capstone
                 return;
             }
 
-            // Check to see if username already exists
+            // Check to see if username/password combo already exists
             var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
                             postKeyAction: c =>
                             {
@@ -74,12 +79,15 @@ namespace Capstone
             conn.CreateTable<Models.LoginModel>();
             string userName = username.Text;
             var result = conn.Table<Models.LoginModel>().Where(v => v.Username == username.Text && v.Password == password.Text).FirstOrDefault();
+
+            // Already exists
             if (result != null)
             {
                 DisplayAlert("Conflict", "User already exists", "Ok");
                 conn.Close();
                 return;
             }
+            // Doesn't exist
             else
             {
                 // Create a new login
@@ -102,7 +110,6 @@ namespace Capstone
                 return;
             }
         }
-
     }
 }
 

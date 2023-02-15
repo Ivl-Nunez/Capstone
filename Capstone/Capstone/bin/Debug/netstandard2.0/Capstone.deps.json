@@ -10,7 +10,7 @@
       "Capstone/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "Xamarin.Essentials": "1.7.4",
+          "Xamarin.Essentials": "1.7.5",
           "Xamarin.Forms": "5.0.0.2545",
           "sqlite-net-sqlcipher": "1.8.116"
         },
@@ -27,6 +27,12 @@
       "sqlite-net-sqlcipher/1.8.116": {
         "dependencies": {
           "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "assemblyVersion": "1.8.116.0",
+            "fileVersion": "1.8.116.0"
+          }
         }
       },
       "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
@@ -34,6 +40,12 @@
           "SQLitePCLRaw.core": "2.0.4",
           "SQLitePCLRaw.lib.e_sqlcipher": "2.0.4",
           "SQLitePCLRaw.provider.e_sqlcipher": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
         }
       },
       "SQLitePCLRaw.core/2.0.4": {
@@ -51,6 +63,12 @@
       "SQLitePCLRaw.provider.e_sqlcipher/2.0.4": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
         }
       },
       "System.Buffers/4.4.0": {
@@ -90,7 +108,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.7.4": {
+      "Xamarin.Essentials/1.7.5": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -202,12 +220,12 @@
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.7.4": {
+    "Xamarin.Essentials/1.7.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oYCnkjzooqWdI1VnOOt1gyUF+s1Nbi6OYy7HlltzHrfNyh8MMKgMTO30UGe3kcj9YmD7IeT5clh3xCDmfTfZSw==",
-      "path": "xamarin.essentials/1.7.4",
-      "hashPath": "xamarin.essentials.1.7.4.nupkg.sha512"
+      "sha512": "sha512-+dDLUCXOehBxFOw5D5AXeFtcLQ0HBCMeVHSSbonVuZWJ2/8mb7+pGFQA8n053Lvpie7CAd8C+05chIKK6YCBiw==",
+      "path": "xamarin.essentials/1.7.5",
+      "hashPath": "xamarin.essentials.1.7.5.nupkg.sha512"
     },
     "Xamarin.Forms/5.0.0.2545": {
       "type": "package",

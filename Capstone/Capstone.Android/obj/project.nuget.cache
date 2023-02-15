@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yrEpKm1vc+EPoIv3ZKDoIccRFUDQ5B1MKd5RjpHH2Ta8flJU35scs1QjtrZWNiftPNfrzh/NcxuSTgDcQgJhyw==",
+  "dgSpecHash": "6QrBKDyZQ55MlrXEt6TT569Ir3gdkfmmeVNxIQ4rFGaErlVlMH/veaTkX/s70aUBQ05PYDEB8AF6sbJHdaXcsg==",
   "success": true,
   "projectFilePath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj",
   "expectedPackageFiles": [
@@ -66,7 +66,7 @@
     "/Users/michael/.nuget/packages/xamarin.androidx.versionedparcelable/1.1.1.8/xamarin.androidx.versionedparcelable.1.1.1.8.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.androidx.viewpager/1.0.0.8/xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.androidx.viewpager2/1.0.0.10/xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
-    "/Users/michael/.nuget/packages/xamarin.essentials/1.7.4/xamarin.essentials.1.7.4.nupkg.sha512",
+    "/Users/michael/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.google.android.material/1.4.0.2/xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"

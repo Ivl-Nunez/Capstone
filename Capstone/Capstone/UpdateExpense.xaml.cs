@@ -28,7 +28,7 @@ namespace Capstone
 			InitializeComponent ();
 		}
 
-        protected override async void OnAppearing() // #2 Use of Polymorphism
+        protected override void OnAppearing() // #2 Use of Polymorphism
         {
             var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
                 postKeyAction: c =>

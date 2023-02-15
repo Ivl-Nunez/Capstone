@@ -12,8 +12,7 @@
                     BackgroundColor="LightGray"
                     CornerRadius="10"
                     HeightRequest="50"
-                    WidthRequest="50"
-                    >
+                    WidthRequest="50">
                 <StackLayout VerticalOptions="Center">
                     <Label Text="Name" FontFamily="Marker Felt"/>
                     <Entry x:Name="expenseName" FontFamily="Marker Felt"/>

@@ -11,11 +11,6 @@ namespace Capstone
         public string Name { get; set; }
         public float Amount { get; set; }
         public DateTime DueDate { get; set; }
-
-		public Expense()
-        {
-
-        }
 	}
 }
 
