@@ -29,6 +29,7 @@ namespace Capstone
         {
             this.Username = username;
             InitializeComponent();
+            //BindingContext = new Models.BudgetModelView();
         }
 
         /********************
@@ -138,14 +139,6 @@ namespace Capstone
             // If empty, should say something so user knows its not broken
 
 
-            var budgetItems = GetBudgetItemsFromDatabase();
-
-
-            DisplayAlert("Past Budget", "You clicked to display past budgets", "Ok");
-        }
-
-        List<Budget> GetBudgetItemsFromDatabase()
-        {
             var options = new SQLiteConnectionString(App.DatabaseLocation, true, "password",
                             postKeyAction: c =>
                             {
@@ -154,17 +147,124 @@ namespace Capstone
             SQLiteConnection conn = new SQLiteConnection(options);
             conn.CreateTable<Budget>();
             List<Budget> budgetItems = conn.Table<Budget>().ToList();
+
+            // Set to values
+            if (budgetItems.Count > 0)
+            {
+                entryA1.Text = budgetItems[0].Date.ToString() ?? "";
+                entryA2.Text = budgetItems[0].Username ?? "";
+                entryA3.Text = budgetItems[0].Free2Spend.ToString() ?? "";
+            }
+
+            if (budgetItems.Count > 1)
+            {
+                entryB1.Text = budgetItems[1].Date.ToString() ?? "";
+                entryB2.Text = budgetItems[1].Username ?? "";
+                entryB3.Text = budgetItems[1].Free2Spend.ToString() ?? "";
+            }
+
+            if (budgetItems.Count > 2)
+            {
+                entryC1.Text = budgetItems[2].Date.ToString() ?? "";
+                entryC2.Text = budgetItems[2].Username ?? "";
+                entryC3.Text = budgetItems[2].Free2Spend.ToString() ?? "";
+            }
+
+            if (budgetItems.Count > 3)
+            {
+                entryD1.Text = budgetItems[3].Date.ToString() ?? "";
+                entryD2.Text = budgetItems[3].Username ?? "";
+                entryD3.Text = budgetItems[3].Free2Spend.ToString() ?? "";
+            }
+
+            if (budgetItems.Count > 4)
+            {
+                entryE1.Text = budgetItems[4].Date.ToString() ?? "";
+                entryE2.Text = budgetItems[4].Username ?? "";
+                entryE3.Text = budgetItems[4].Free2Spend.ToString() ?? "";
+            }
+
             conn.Close();
-            return budgetItems;
         }
 
         void searchBtn_Clicked(System.Object sender, System.EventArgs e)
         {
-            // Make sure there is something in the search field, if not, give error about empty search
+            Random random = new Random();
+            int randomNumber = random.Next(1, 11);
 
-            // Look throughout the fields shown and select the one/ones matching
-            // If no matches, should dispay a mesage saying so
-            DisplayAlert("Search", "You clicked to search", "Ok");
+            switch(randomNumber)
+            {
+                case 1:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: A budget tells your money where to go instead of wondering where it went.\n\n" +
+                        "Row 2: Failing to plan is planning to fail.\n\n" +
+                        "Row 3: You must gain control over your money or the lack of it will forever control you.\n",
+                        "Ok..");
+                    break;
+                case 2:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: Wealth is not about having a lot of money; it's about having a lot of options.\n\n" +
+                        "Row 2: Budgeting is telling your money where to go, instead of wondering where it went.\n\n" +
+                        "Row 3: The secret to wealth is simple: Find a way to do more for others than anyone else does.\n",
+                        "Ok..");
+                    break;
+                case 3:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: A penny saved is a penny earned.\n\n" +
+                        "Row 2: The biggest mistake people make is not making a budget, or sticking to one.\n\n" +
+                        "Row 3: A budget is a plan for your money, just like a roadmap is a plan for your trip.\n",
+                        "Ok..");
+                    break;
+                case 4:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: The greatest wealth is to live content with little.\n\n" +
+                        "Row 2: If you want to be rich, you need to be financially literate.\n\n" +
+                        "Row 3: The future belongs to those who prepare for it today.\n",
+                        "Ok..");
+                    break;
+                case 5:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: The more you save, the more you have to invest, and the more you have to invest, the more you can earn.\n\n" +
+                        "Row 2: It's not how much money you make, but how much money you keep, how hard it works for you, and how many generations you keep it for.\n\n" +
+                        "Row 3: The habit of saving is itself an education; it fosters every virtue, teaches self-denial, cultivates the sense of order, trains to forethought, and so broadens the mind.\n",
+                        "Ok..");
+                    break;
+                case 6:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: The biggest challenge in life is learning how to manage your finances.\n\n" +
+                        "Row 2: The most important thing about budgeting is learning how to prioritize your spending.\n\n" +
+                        "Row 3: Wealth is not a salary or a bank balance, it is a state of mind.\n",
+                        "Ok..");
+                    break;
+                case 7:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: Budgeting is not about denying yourself the things you love, it's about making sure you can afford the things you love.\n\n" +
+                        "Row 2: The best way to predict your financial future is to create it.\n\n" +
+                        "Row 3: The habit of saving is the cornerstone of wealth.\n",
+                        "Ok..");
+                    break;
+                case 8:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: Budgeting isn't about being cheap, it's about being smart.\n\n" +
+                        "Row 2: You can't have financial peace if you have debt.\n\n" +
+                        "Row 3: A goal without a plan is just a wish.\n",
+                        "Ok..");
+                    break;
+                case 9:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: Money is like a sixth sense without which you cannot make a complete use of the other five.\n\n" +
+                        "Row 2: Don't tell me what you value, show me your budget, and I'll tell you what you value.\n\n" +
+                        "Row 3: Financial freedom is available to those who learn about it and work for it.\n",
+                        "Ok..");
+                    break;
+                case 10:
+                    DisplayAlert("AI Powered Quotes",
+                        "Row 1: Successful people are simply those with successful habits.\n\n" +
+                        "Row 2: Budgeting is about giving every dollar a job.\n\n" +
+                        "Row 3: It's not how much money you make, but how much money you keep, how hard it works for you, and how many generations you keep it for.\n",
+                        "Ok..");
+                    break;
+            }
         }
 
 

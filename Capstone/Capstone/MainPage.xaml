@@ -91,7 +91,8 @@
 
         <ScrollView>
             <StackLayout>
-                <Button x:Name="pastBudgetsBtn" Margin="0,75,0,75" Text="Past Budgets" FontSize="48" Clicked="pastBudgetsBtn_Clicked" TextColor="#eebbc3" FontFamily="Marker Felt"/>
+                <Button x:Name="pastBudgetsBtn" Margin="0,75,0,75" Text="Past Budgets (5)" FontSize="48" Clicked="pastBudgetsBtn_Clicked" TextColor="#eebbc3" FontFamily="Marker Felt"/>
+                <Label Text="Advice Search Powered by 'AI'" TextColor="White" FontFamily="Marker Felt"  HorizontalOptions="Center"/>
                 <StackLayout Orientation="Horizontal" Margin="0,0,0,25">
                     <Entry x:Name="searchField" HorizontalOptions="FillAndExpand" Margin="100,0,10,0" FontFamily="Marker Felt"/>
                     <Button x:Name="searchBtn" ImageSource="search.png" Clicked="searchBtn_Clicked" TextColor="#eebbc3" Margin="0,0,10,0" FontFamily="Marker Felt"></Button>
@@ -101,63 +102,64 @@
                 </Frame>-->
                 <StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Label Text="Date" TextColor="white" FontSize="24" FontFamily="Marker Felt"/>
-                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Label Text="Balance" TextColor="white" FontSize="24" FontFamily="Marker Felt"/>
-                    <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Label Text="Expenses" TextColor="white" FontSize="24" FontFamily="Marker Felt"/>
+                    <Label Text="Date" TextColor="white" FontSize="24" FontFamily="Marker Felt" Margin="0,0,30,0"/>
+                    <!--<BoxView Color="Black" WidthRequest="1" HeightRequest="30" />-->
+                    <Label Text="Name" TextColor="white" FontSize="24" FontFamily="Marker Felt" Margin="50,0,30,0"/>
+                    <!--<BoxView Color="Black" WidthRequest="1" HeightRequest="30" />-->
+                    <Label Text="Balance" TextColor="white" FontSize="24" FontFamily="Marker Felt" Margin="35,0,0,0"/>
                 </StackLayout>
 
                 <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryA1" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryA2" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryA3" WidthRequest="125" IsEnabled="False"/>
                 </StackLayout>
 
                 <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryB1" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryB2" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryB3" WidthRequest="125" IsEnabled="False"/>
                 </StackLayout>
 
                 <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryC1" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryC2" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryC3" WidthRequest="125" IsEnabled="False"/>
                 </StackLayout>
 
                 <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryD1" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryD2" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryD3" WidthRequest="125" IsEnabled="False"/>
                 </StackLayout>
 
                 <BoxView Color="Black" WidthRequest="300" HeightRequest="1" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryE1" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryE2" WidthRequest="125" IsEnabled="False"/>
                     <BoxView Color="Black" WidthRequest="1" HeightRequest="30" />
-                    <Entry WidthRequest="125" IsEnabled="False"/>
+                    <Entry x:Name="entryE3" WidthRequest="125" IsEnabled="False"/>
                 </StackLayout>
             </StackLayout>
+
 
             </StackLayout>
         </ScrollView>
