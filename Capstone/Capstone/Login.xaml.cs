@@ -78,7 +78,7 @@ namespace Capstone
             SQLiteConnection conn = new SQLiteConnection(options);
             conn.CreateTable<Models.LoginModel>();
             string userName = username.Text;
-            var result = conn.Table<Models.LoginModel>().Where(v => v.Username == username.Text && v.Password == password.Text).FirstOrDefault();
+            var result = conn.Table<Models.LoginModel>().Where(v => v.Username == username.Text).FirstOrDefault();
 
             // Already exists
             if (result != null)
@@ -100,7 +100,7 @@ namespace Capstone
                 int rows = conn.Insert(login);
                 if (rows > 0)
                 {
-                    Navigation.PushAsync(new MainPage(result.Username));
+                    Navigation.PushAsync(new MainPage(login.Username));
                 }
                 else
                 {

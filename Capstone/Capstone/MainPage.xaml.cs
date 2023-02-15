@@ -272,17 +272,17 @@ namespace Capstone
             conn.CreateTable<Expense>();
             conn.CreateTable<Budget>();
 
-            // Find the latest budget and use info to update budget tab
-            // Update the balance, due date, free to spend & last budget
+            // Read budget information
             Budget budget = conn.Table<Budget>().OrderByDescending(x => x.Id).Where(x => x.Username == this.Username).FirstOrDefault();
-            //moneyInAccount.Text = budget.BankAmount.ToString();
-            //nextPayDate.Date = budget.Date.Date;
-            //free2Spend.Text = budget.Free2Spend.ToString();
-            //lastBudgetDate.Text = budget.LastBudget.ToString();
+            if (budget != null)
+            {
+                moneyInAccount.Text = budget.BankAmount.ToString();
+                nextPayDate.Date = budget.Date.Date;
+                free2Spend.Text = budget.Free2Spend.ToString();
+                lastBudgetDate.Text = budget.LastBudget.ToString();
+            }
 
-            // Update list of expenses
-            //SQLiteConnection conn = new SQLiteConnection(WGU_Xamarin_Project.App.DatabaseLocation);
-            //conn.CreateTable<Course>();
+            // Read Expense information
             var expenses = conn.Table<Expense>().Where(x => x.Username == this.Username).ToList();
             conn.Close();
             listExpenses.ItemsSource = expenses;
