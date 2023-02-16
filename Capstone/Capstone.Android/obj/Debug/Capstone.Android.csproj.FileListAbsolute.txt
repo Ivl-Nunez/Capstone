@@ -1316,3 +1316,7 @@
 /Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/android/assets/Microsoft.Win32.Registry.dll
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/android/assets/nunit.framework.dll
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/android/assets/Xamarin.Forms.Core.UnitTests.dll
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/obj/Debug/android/assets/Xamarin.Forms.Xaml.UnitTests.dll

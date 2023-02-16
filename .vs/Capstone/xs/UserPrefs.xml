@@ -1,8 +1,46 @@
-﻿<Properties StartupConfiguration="{80BA1551-E399-4B42-9CB6-51894AECACB2}|Default">
+﻿<Properties StartupConfiguration="{FA30CC84-1436-4AA3-BB89-8A2ECAE926BC}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.ItemProperties.Capstone.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A50E0A04-192C-4C8C-BBCE-7E10A463CB4D" />
+  <MonoDevelop.Ide.ItemProperties.Capstone.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Capstone/Capstone/UnitTests/EmptyClass.cs">
+    <Files>
+      <File FileName="Capstone/Capstone/UnitTests/Test.cs" />
+      <File FileName="Capstone/Capstone/UnitTests/EmptyClass.cs" Line="1" Column="1" />
+      <File FileName="Capstone/Capstone/Capstone.csproj" Line="4" Column="22" />
+      <File FileName="Capstone/Capstone/MainPage.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Capstone" expanded="True">
+            <Node name="Capstone" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="UnitTests" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="Capstone.Android" expanded="True" />
+            <Node name="Capstone.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Capstone" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <Debugger.DebugSourceFolders>
     <String>/Users/michael/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/xamarin/Xamarin.Forms/7958ff904a0ca058fb9c76915aaeb4f6c7ef9a54</String>
   </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.ItemProperties.Capstone.iOS FirstBuild="True" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Capstone.Android PreferredExecutionTarget="Android.emulator-5554" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
 </Properties>

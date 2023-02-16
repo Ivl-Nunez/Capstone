@@ -9,21 +9,47 @@
     ".NETStandard,Version=v2.0/": {
       "Capstone/1.0.0": {
         "dependencies": {
+          "Microsoft.NET.Test.Sdk": "17.4.1",
+          "Microsoft.TestPlatform": "17.4.1",
           "NETStandard.Library": "2.0.3",
+          "NUnit": "3.13.3",
+          "NUnit.ConsoleRunner": "3.16.2",
+          "NUnit3TestAdapter": "4.3.1",
           "Xamarin.Essentials": "1.7.5",
           "Xamarin.Forms": "5.0.0.2545",
+          "Xamarin.Forms.Mocks": "4.7.0.1",
           "sqlite-net-sqlcipher": "1.8.116"
         },
         "runtime": {
           "Capstone.dll": {}
         }
       },
+      "Microsoft.CodeCoverage/17.4.1": {},
+      "Microsoft.NET.Test.Sdk/17.4.1": {
+        "dependencies": {
+          "Microsoft.CodeCoverage": "17.4.1"
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.TestPlatform/17.4.1": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
+      "NUnit/3.13.3": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {
+            "assemblyVersion": "3.13.3.0",
+            "fileVersion": "3.13.3.0"
+          }
+        }
+      },
+      "NUnit.ConsoleRunner/3.16.2": {},
+      "NUnit3TestAdapter/4.3.1": {},
       "sqlite-net-sqlcipher/1.8.116": {
         "dependencies": {
           "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
@@ -134,6 +160,21 @@
             "fileVersion": "5.0.0.960"
           }
         }
+      },
+      "Xamarin.Forms.Mocks/4.7.0.1": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2545"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.UnitTests.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.UnitTests.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -143,6 +184,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.CodeCoverage/17.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T21KxaiFawbrrjm0uXjxAStXaBm5P9H6Nnf8BUtBTvIpd8q57lrChVBCY2dnazmSu9/kuX4z5+kAOT78Dod7vA==",
+      "path": "microsoft.codecoverage/17.4.1",
+      "hashPath": "microsoft.codecoverage.17.4.1.nupkg.sha512"
+    },
+    "Microsoft.NET.Test.Sdk/17.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kJ5/v2ad+VEg1fL8UH18nD71Eu+Fq6dM4RKBVqlV2MLSEK/AW4LUkqlk7m7G+BrxEDJVwPjxHam17nldxV80Ow==",
+      "path": "microsoft.net.test.sdk/17.4.1",
+      "hashPath": "microsoft.net.test.sdk.17.4.1.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -150,12 +205,40 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
+    "Microsoft.TestPlatform/17.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sTeFq+dlnov7W1f0V8Y3HwCDj5PhUDfRthPa8HjLDrj0mAj55gi/9HoNGD+tZTSM9epFydyAgDCGKa1dj5tVNg==",
+      "path": "microsoft.testplatform/17.4.1",
+      "hashPath": "microsoft.testplatform.17.4.1.nupkg.sha512"
+    },
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "NUnit/3.13.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+      "path": "nunit/3.13.3",
+      "hashPath": "nunit.3.13.3.nupkg.sha512"
+    },
+    "NUnit.ConsoleRunner/3.16.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VKsL1kfUMLX8hsuGpSRd/n+IcBSxfbE+0zNgW3USiG3lW2h70o4+j13PcR6R7i44q99tgBrqu0bzz7vkRrL34Q==",
+      "path": "nunit.consolerunner/3.16.2",
+      "hashPath": "nunit.consolerunner.3.16.2.nupkg.sha512"
+    },
+    "NUnit3TestAdapter/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R+bGFtsUpLWywjT1nb3xMmoVa2AIw6ClIGC+XjW9lYE8hwJeos+NdR/mtg4RXbBphmC9epALrnUc6MM7mUG8+Q==",
+      "path": "nunit3testadapter/4.3.1",
+      "hashPath": "nunit3testadapter.4.3.1.nupkg.sha512"
     },
     "sqlite-net-sqlcipher/1.8.116": {
       "type": "package",
@@ -233,6 +316,13 @@
       "sha512": "sha512-mjfNx4Y/RD0FYjrBfETT2iNdFD1WCXN5wNHPhQaXm3k0u5XYJaOx5K83EZ8nVun+FPi7Wo3rQPIN0DLCs5PG4A==",
       "path": "xamarin.forms/5.0.0.2545",
       "hashPath": "xamarin.forms.5.0.0.2545.nupkg.sha512"
+    },
+    "Xamarin.Forms.Mocks/4.7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WAs2tZIjwTuOaqa30wFaHE65kbp1HXJPHUX3fLCqaWvK49zT/MC/NjV0W7X1ICxPM9Qclq2/2+Is9/vHBhZ9NQ==",
+      "path": "xamarin.forms.mocks/4.7.0.1",
+      "hashPath": "xamarin.forms.mocks.4.7.0.1.nupkg.sha512"
     }
   }
 }

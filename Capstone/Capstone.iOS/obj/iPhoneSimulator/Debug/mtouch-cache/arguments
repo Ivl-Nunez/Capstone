@@ -1,5 +1,5 @@
-# Version: 16.1.1.27 (xcode14.1: 933c6c2c9)
-/Library/Frameworks/Xamarin.iOS.framework/Versions/16.1.1.27/lib/mtouch/mtouch.exe \
+# Version: 16.2.0.2 (xcode14.2: 956a059ba)
+/Library/Frameworks/Xamarin.iOS.framework/Versions/16.2.0.2/lib/mtouch/mtouch.exe \
 	--debug \
 	--sgen-conc \
 	'/target-framework:Xamarin.iOS,Version=v1.0' \
@@ -11,7 +11,7 @@
 	--sim=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Capstone.iOS.app \
 	--executable=Capstone.iOS \
 	--nolink \
-	--sdk=16.1 \
+	--sdk=16.2 \
 	--aot-options=-O=-float32 \
 	--abi=x86_64 \
 	--symbollist=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
@@ -168,6 +168,7 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
+	--reference=/Users/michael/.nuget/packages/nunit/3.13.3/lib/netstandard2.0/nunit.framework.dll \
 	--reference=/Users/michael/.nuget/packages/sqlite-net-sqlcipher/1.8.116/lib/netstandard2.0/SQLite-net.dll \
 	--reference=/Users/michael/.nuget/packages/sqlitepclraw.bundle_e_sqlcipher/2.0.4/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
 	--reference=/Users/michael/.nuget/packages/sqlitepclraw.core/2.0.4/lib/netstandard2.0/SQLitePCLRaw.core.dll \
@@ -213,5 +214,7 @@
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll \
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll \
 	--reference=/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
+	--reference=/Users/michael/.nuget/packages/xamarin.forms.mocks/4.7.0.1/lib/netstandard2.0/Xamarin.Forms.Core.UnitTests.dll \
+	--reference=/Users/michael/.nuget/packages/xamarin.forms.mocks/4.7.0.1/lib/netstandard2.0/Xamarin.Forms.Xaml.UnitTests.dll \
 	--reference=/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/bin/Debug/netstandard2.0/Capstone.dll \
 	@/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/response-file.rsp \

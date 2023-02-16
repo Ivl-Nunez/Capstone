@@ -148,3 +148,6 @@
 /Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/Capstone.iOS.csproj.CopyComplete
 /Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/Capstone.iOS.exe
 /Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/obj/iPhoneSimulator/Debug/Capstone.iOS.pdb
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/nunit.framework.dll
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.UnitTests.dll
+/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.UnitTests.dll

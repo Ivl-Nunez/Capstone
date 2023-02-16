@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/michael/Desktop/NewCapstone/Capstone/Tests/Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/michael/Desktop/NewCapstone/Capstone/Tests/Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/Tests/Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/Tests/Tests.csproj",
+        "packagesPath": "/Users/michael/.nuget/packages/",
+        "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/michael/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/michael/Library/Caches/VisualStudio/17.0/MSBuild/50630_3/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

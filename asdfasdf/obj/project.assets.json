@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net6.0": []
+  },
+  "packageFolders": {
+    "/Users/michael/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/michael/Desktop/NewCapstone/Capstone/asdfasdf/asdfasdf.csproj",
+      "projectName": "asdfasdf",
+      "projectPath": "/Users/michael/Desktop/NewCapstone/Capstone/asdfasdf/asdfasdf.csproj",
+      "packagesPath": "/Users/michael/.nuget/packages/",
+      "outputPath": "/Users/michael/Desktop/NewCapstone/Capstone/asdfasdf/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/michael/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "runtimeIdentifierGraphPath": "/Users/michael/Library/Caches/VisualStudio/17.0/MSBuild/53485_3/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

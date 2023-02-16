@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "8B6YkRVaA4zaZP0OubxO4TBGLA245Cvm1q0S9nHETFuLJUogn3nguF+0OWf1Q0XMtcmysUf7g8HNFjoFSTR1EQ==",
+  "dgSpecHash": "ITL4ueW7hP6UYJJduvT3CDITMNtv3ngc2pOeD7aCUTOzekSxFPzZRgiLXCL2fH6jUGu4GfztozXW+D89xp9tEw==",
   "success": true,
   "projectFilePath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.iOS/Capstone.iOS.csproj",
   "expectedPackageFiles": [
+    "/Users/michael/.nuget/packages/microsoft.net.test.sdk/17.4.1/microsoft.net.test.sdk.17.4.1.nupkg.sha512",
+    "/Users/michael/.nuget/packages/microsoft.testplatform/17.4.1/microsoft.testplatform.17.4.1.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit.consolerunner/3.16.2/nunit.consolerunner.3.16.2.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit3testadapter/4.3.1/nunit3testadapter.4.3.1.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlite-net-sqlcipher/1.8.116/sqlite-net-sqlcipher.1.8.116.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlitepclraw.bundle_e_sqlcipher/2.0.4/sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
@@ -14,7 +19,8 @@
     "/Users/michael/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/michael/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512",
-    "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512"
+    "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512",
+    "/Users/michael/.nuget/packages/xamarin.forms.mocks/4.7.0.1/xamarin.forms.mocks.4.7.0.1.nupkg.sha512"
   ],
   "logs": []
 }

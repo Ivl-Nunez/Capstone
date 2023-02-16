@@ -1,11 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "xLIGmrCNCU3M55og9Qr6b2oFV9KasM+QuQ8TrAhWEEmKvcR0o26TXeygpaOSm0/yLg5B53jmowpXRTBR9Q6RHA==",
+  "dgSpecHash": "jh0G8bUhqvgzuYgjuyDP8PqiqI2pnCgT1CQMxkPXlQ2eqnf7l/QZDY8KdT+KRuNx+0o1IM74GRupffbKgLbL+g==",
   "success": true,
   "projectFilePath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone/Capstone.csproj",
   "expectedPackageFiles": [
+    "/Users/michael/.nuget/packages/microsoft.codecoverage/17.4.1/microsoft.codecoverage.17.4.1.nupkg.sha512",
+    "/Users/michael/.nuget/packages/microsoft.net.test.sdk/17.4.1/microsoft.net.test.sdk.17.4.1.nupkg.sha512",
     "/Users/michael/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/michael/.nuget/packages/microsoft.testplatform/17.4.1/microsoft.testplatform.17.4.1.nupkg.sha512",
     "/Users/michael/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit.consolerunner/3.16.2/nunit.consolerunner.3.16.2.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit3testadapter/4.3.1/nunit3testadapter.4.3.1.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlite-net-sqlcipher/1.8.116/sqlite-net-sqlcipher.1.8.116.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlitepclraw.bundle_e_sqlcipher/2.0.4/sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
@@ -16,7 +22,19 @@
     "/Users/michael/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/michael/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512",
-    "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512"
+    "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512",
+    "/Users/michael/.nuget/packages/xamarin.forms.mocks/4.7.0.1/xamarin.forms.mocks.4.7.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NUnit3TestAdapter 4.3.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NUnit3TestAdapter",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

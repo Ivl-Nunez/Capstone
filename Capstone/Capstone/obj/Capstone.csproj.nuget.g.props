@@ -14,5 +14,12 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xamarin.forms/5.0.0.2545/buildTransitive/Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)xamarin.forms/5.0.0.2545/buildTransitive/Xamarin.Forms.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit3testadapter/4.3.1/build/net35/NUnit3TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunit3testadapter/4.3.1/build/net35/NUnit3TestAdapter.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit/3.13.3/build/NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit/3.13.3/build/NUnit.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage/17.4.1/build/netstandard2.0/Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage/17.4.1/build/netstandard2.0/Microsoft.CodeCoverage.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNUnit_ConsoleRunner Condition=" '$(PkgNUnit_ConsoleRunner)' == '' ">/Users/michael/.nuget/packages/nunit.consolerunner/3.16.2</PkgNUnit_ConsoleRunner>
+    <PkgMicrosoft_TestPlatform Condition=" '$(PkgMicrosoft_TestPlatform)' == '' ">/Users/michael/.nuget/packages/microsoft.testplatform/17.4.1</PkgMicrosoft_TestPlatform>
+  </PropertyGroup>
 </Project>

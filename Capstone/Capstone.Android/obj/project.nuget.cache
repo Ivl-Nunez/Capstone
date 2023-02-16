@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "6QrBKDyZQ55MlrXEt6TT569Ir3gdkfmmeVNxIQ4rFGaErlVlMH/veaTkX/s70aUBQ05PYDEB8AF6sbJHdaXcsg==",
+  "dgSpecHash": "KBkVh44IYunZ12OQwU+vFc8/hOCiWUIRPuUE4UjF5DPXrp64RRgnQoxgGKQ0iJ3bJo3CBmDL8NdQ9oBzF7bBvg==",
   "success": true,
   "projectFilePath": "/Users/michael/Desktop/NewCapstone/Capstone/Capstone/Capstone.Android/Capstone.Android.csproj",
   "expectedPackageFiles": [
+    "/Users/michael/.nuget/packages/microsoft.net.test.sdk/17.4.1/microsoft.net.test.sdk.17.4.1.nupkg.sha512",
+    "/Users/michael/.nuget/packages/microsoft.testplatform/17.4.1/microsoft.testplatform.17.4.1.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit.consolerunner/3.16.2/nunit.consolerunner.3.16.2.nupkg.sha512",
+    "/Users/michael/.nuget/packages/nunit3testadapter/4.3.1/nunit3testadapter.4.3.1.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlite-net-sqlcipher/1.8.116/sqlite-net-sqlcipher.1.8.116.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlitepclraw.bundle_e_sqlcipher/2.0.4/sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512",
     "/Users/michael/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
@@ -68,6 +73,7 @@
     "/Users/michael/.nuget/packages/xamarin.androidx.viewpager2/1.0.0.10/xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.essentials/1.7.5/xamarin.essentials.1.7.5.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512",
+    "/Users/michael/.nuget/packages/xamarin.forms.mocks/4.7.0.1/xamarin.forms.mocks.4.7.0.1.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.google.android.material/1.4.0.2/xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "/Users/michael/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
