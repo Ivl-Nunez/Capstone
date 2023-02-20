@@ -39,7 +39,7 @@ I would recommend using Visual Studio (not vscode) to run the program. Outside o
 need anything else. If you want it to run on your smartphonek, well you'll need to create the APK (Android) or IPA (iOS). Sadly if you 
 have an iPhone like me, you'll need an apple developer accont ($99/year) to run it on your phone. Apple...such rollercoast relationship we have.
 
-## In Use (Coming Soon)
+## Screenshots
 <div align="center">
   <span><img src="./loginScreen.jpg" height=650 width=300 /></span>
   <span><img src="./aligner.png" height=50 width=150 /></span>
