@@ -41,13 +41,14 @@ have an iPhone like me, you'll need an apple developer accont ($99/year) to run 
 
 ## In Use (Coming Soon)
 <div align="center">
-  <span><img src="./loginScreen.jpg" height=750 width=400 /></span>
-  <span><img src="./Expenses.jpg" height=750 width=400 /></span>
+  <span><img src="./loginScreen.jpg" height=650 width=300 /></span>
+  <span>     </span>
+  <span><img src="./Expenses.jpg" height=650 width=300 /></span>
 </div>
 <br><br>
 <div align="center">
-  <img src="./Budget.jpg" height=750 width=400 />
-  <img src="./Reports.jpg" height=750 width=400 />
+  <img src="./Budget.jpg" height=650 width=300 />
+  <img src="./Reports.jpg" height=650 width=300 />
 </div>
 <br><br>
 
