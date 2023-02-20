@@ -40,6 +40,12 @@ need anything else. If you want it to run on your smartphonek, well you'll need 
 have an iPhone like me, you'll need an apple developer accont ($99/year) to run it on your phone. Apple...such rollercoast relationship we have.
 
 ## In Use (Coming Soon)
+<div align="center">
+  <span><img src="./loginScreen.jpg" height=750 width=400 /></span>
+  <span><img src="./Expenses.jpg" /></span>
+</div>
+<img src="./Budget.jpg" />
+<img src="./Reports.jpg" />
 
 ## License: 
 Creative Commons Attribution-NonCommercial license (CC BY-NC)
